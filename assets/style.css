@@ -1,0 +1,28 @@
+.page {
+    background-color: beige;
+}
+
+.title {
+    text-align: center;
+    font-size: larger;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#start {
+    font-size: 25px;
+    padding: 5px;
+    background-color: pink;
+    border-radius: 10px;
+    width: 120px;
+}
+
+#start:hover {
+    background-color: rgb(226, 143, 211);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    font-size: large;
+}
