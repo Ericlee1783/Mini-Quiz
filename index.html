@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mini Quiz</title>
     <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body class="page">
@@ -13,14 +13,26 @@
             <p>Time:</p>
         </nav>
     </section>
-    <section class="title">
-        <h1>Free Code Quiz Challenge</h1>
-        <p>Test your knowledge with this free quiz and to also help with studying for future interview questions about fullstack development terms! Click start below and keep in mind any incorrect answers will reduce the amount of time for the quiz. </p>
-        <button id="start">Start</button>
-    </section>
+    <div id="start-container">
+        <section class="title">
+            <h1>Free Code Quiz Challenge</h1>
+            <p>Test your knowledge with this free quiz and to also help with studying for future interview questions about fullstack development terms! Click start below and keep in mind any incorrect answers will reduce the amount of time for the quiz. </p>
+            <button id="start">Start</button>
+        </section>
+    </div>
+    <!-- We can hard code our questions container and show it as soon as the button is clicked -->
 
+    <div id="question-container" class="hidden">
+        <h2 id="question-header"></h2>
+            <button id="answer-a"></button>
+            <button id="answer-b"></button>
+            <button id="answer-c"></button>
+            <button id="answer-d"></button>
+    </div>
 
-
+    <div id="final-container" class="hidden">
+            <h2>END OF GAME GOOD JOB!</h2>
+    </div>
 
     
     <script src="./assets/script.js"></script> 

@@ -26,3 +26,18 @@
     justify-content: space-between;
     font-size: large;
 }
+
+.hidden {
+    display: none;
+}
+
+#answer-a, #answer-b, #answer-c, #answer-d {
+    font-size: 20px;
+    padding: 5px;
+    background-color: pink;
+    border-radius: 10px;
+    width: 250px;
+    display: flex;
+    display: inline;
+    align-items: center;
+}
