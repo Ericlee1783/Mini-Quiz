@@ -5,6 +5,7 @@ This quiz is built to test the user's knowledge on basic questions about coding 
 
 ## Installation
 https://github.com/Ericlee1783/Mini-Quiz This link takes us to the code for the Mini Quiz
+https://ericlee1783.github.io/Mini-Quiz/ This link takes us to the actual quiz!
 
 ## Usage
 ![Alt text](image.png) 
