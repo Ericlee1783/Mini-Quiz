@@ -5,6 +5,7 @@ var questionContainer = document.getElementById('question-container');
 var finalContainer = document.getElementById('final-container');
 var timerElement = document.getElementById('timer-count');
 var highScoreElement = document.getElementById('highscore');
+var finalScoreElement = document.getElementById('finalScore')
 
 var questionHeader = document.getElementById('question-header');
 var answerA = document.getElementById('answer-a');
@@ -14,7 +15,7 @@ var answerD = document.getElementById('answer-d');
 
 // what question we're currently on
 var currentIndex = 0;
-var highScore = 0;
+var finalScore = 0;
 var currentScore = 0;
 var timer;
 var timerCount;
@@ -83,6 +84,7 @@ function questionCorrect () {
 function setScore() {
     highScoreElement.textContent = currentScore;
     localStorage.setItem("Score", currentScore);
+    finalScoreElement.textContent = currentScore;
 }
 
 function questionWrong () {
@@ -106,9 +108,7 @@ function startTimer() {
     }, 1000)
 }
 
-function logScore() {
-    
-}
+
 // populate the html
 // create a function that is ran after startquiz
 // that takes our questions
