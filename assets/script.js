@@ -3,6 +3,8 @@ var startButton = document.getElementById('start');
 var startContainer = document.getElementById('start-container');
 var questionContainer = document.getElementById('question-container');
 var finalContainer = document.getElementById('final-container');
+var timerElement = document.getElementById('timer-count');
+var highScoreElement = document.getElementById('highscore');
 
 var questionHeader = document.getElementById('question-header');
 var answerA = document.getElementById('answer-a');
@@ -68,9 +70,45 @@ function startQuiz() {
     startContainer.setAttribute('class', 'hidden');
     // and remove it from the questions container
     questionContainer.removeAttribute('class');
-    getQuestion()
+    timerCount = 50;
+    getQuestion();
+    startTimer();
 }
 
+function questionCorrect () {
+    currentScore++;
+    setScore()
+}
+
+function setScore() {
+    highScoreElement.textContent = currentScore;
+    localStorage.setItem("Score", currentScore);
+}
+
+function questionWrong () {
+    currentScore = currentScore - 1;
+    setLoss()
+}
+
+function setLoss() {
+    highScoreElement.textContent = currentScore = currentScore - 1
+    localStorage.setItem("Loss", currentScore)
+}
+//start a timer when the quiz starts, take off 5 seconds if wrong anwer
+function startTimer() {
+    timer = setInterval(function() {
+        timerCount--;
+        timerElement.textContent = timerCount;
+        if (timerCount === 0) {
+            endQuiz();
+            clearInterval(timer);
+        }
+    }, 1000)
+}
+
+function logScore() {
+    
+}
 // populate the html
 // create a function that is ran after startquiz
 // that takes our questions
@@ -99,6 +137,7 @@ function checkAnswer(event) {
     if (userResponse === questions[currentIndex].correct) {
         // increment the currentIndex
         currentIndex++
+        questionCorrect();
         // if statement that checks if the current index is = to our questions array.length
         if (currentIndex === questions.length) {
             //end quiz
@@ -111,8 +150,10 @@ function checkAnswer(event) {
         }
     } else {
         console.log("wrong");
-        highScore = highScore - 5
-    }
+        currentScore = currentScore - 1
+        highScore = currentScore
+        timerCount = timerCount - 5
+    } console.log(currentScore)
 }
 
 // endQuiz will hide the questions container

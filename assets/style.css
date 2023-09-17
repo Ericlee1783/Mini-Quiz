@@ -27,6 +27,18 @@
     font-size: large;
 }
 
+#timer-count {
+    text-align: right;
+    margin-top: -10px;
+    font-size: 25px;
+    padding-right: 10px;
+}
+
+#highscore {
+    margin-top: -50px;
+    font-size: 25px;
+}
+
 .hidden {
     display: none;
 }
@@ -41,3 +53,17 @@
     display: inline;
     align-items: center;
 }
+
+#answer-a:hover {
+    background-color: rgb(226, 143, 211);
+}
+#answer-b:hover {
+    background-color: rgb(226, 143, 211);
+}
+#answer-c:hover {
+    background-color: rgb(226, 143, 211);
+}
+#answer-d:hover {
+    background-color: rgb(226, 143, 211);
+}
+
